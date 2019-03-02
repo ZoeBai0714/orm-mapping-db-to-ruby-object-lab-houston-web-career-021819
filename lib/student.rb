@@ -10,6 +10,8 @@ class Student
     student
   end
 
+
+
   def self.all
    result = DB[:conn].execute(
       "SELECT * FROM students"
@@ -19,9 +21,15 @@ class Student
    end
   end
 
+
+
   def self.find_by_name(name)
     # find the student in the database given a name
     # return a new instance of the Student class
+    DB[:conn].execute(
+        "SELECT * FROM students WHERE name = ?",
+        [name]
+      )
   end
   
   def save
