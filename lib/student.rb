@@ -16,8 +16,9 @@ class Student
    result = DB[:conn].execute(
       "SELECT * FROM students"
      )
-   binding.pry   
-   result   
+   result.each do |student|
+     student
+   end
   end
 
   def self.find_by_name(name)
