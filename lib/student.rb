@@ -17,7 +17,7 @@ class Student
       "SELECT * FROM students"
      )
    result.each do |student|
-     student
+     self.new_from_db(student)
    end
   end
 
