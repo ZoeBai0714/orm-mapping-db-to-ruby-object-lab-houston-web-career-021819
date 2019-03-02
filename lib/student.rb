@@ -89,6 +89,7 @@ class Student
       )
     #binding.pry  
     results = students.map {|student| self.new_from_db(student)}
+    results[0]
   end
   
 end
