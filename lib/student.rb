@@ -92,4 +92,8 @@ class Student
     results[0]  # return as an instance
   end
   
+  def self.all_students_in_grade_X(x)
+    
+  end
+  
 end
