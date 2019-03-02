@@ -1,12 +1,5 @@
 class Student
   attr_accessor :id, :name, :grade
-     #@@all = []
-   #def initialize(name, grade)
-    # @name = name
-    # @grade = grade
-    # @@all << self
-  # end
-   
    
   def self.new_from_db(row)
     # create a new Student object given a row from the database
