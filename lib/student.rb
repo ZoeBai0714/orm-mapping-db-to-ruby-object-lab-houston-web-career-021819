@@ -27,11 +27,11 @@ class Student
     # find the student in the database given a name
     # return a new instance of the Student class
     row = DB[:conn].execute(
-        "SELECT * FROM students WHERE name = ?",
+        "SELECT * FROM students WHERE name = ?",   #find the student in DB
         [name]
       )
     #binding.pry  
-    self.new_from_db(row[0])  
+    self.new_from_db(row[0])  #convert row into instance
   end
   
   def save
