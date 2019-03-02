@@ -11,7 +11,7 @@ class Student
   def self.new_from_db(row)
     # create a new Student object given a row from the database
     student = Student.new#(row[0], row[1], row[2])
-    student
+    #student
   end
 
   def self.all
