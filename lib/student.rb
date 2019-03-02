@@ -16,7 +16,7 @@ class Student
    result = DB[:conn].execute(
       "SELECT * FROM students"
      )
-   result.each do |student|
+   result.map do |student|
      self.new_from_db(student)
    end
   end
