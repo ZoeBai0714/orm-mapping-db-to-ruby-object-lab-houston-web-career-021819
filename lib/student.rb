@@ -13,7 +13,7 @@ class Student
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
    DB[:conn].execute(
-      "SELECT * FROM students"
+      "SELECT * FROM Students"
      )
   end
 
