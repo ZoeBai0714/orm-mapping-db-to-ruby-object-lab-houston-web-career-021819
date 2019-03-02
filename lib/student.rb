@@ -71,7 +71,7 @@ class Student
   
   def self.students_below_12th_grade
     students = DB[:conn].execute(
-        "SELECT * FROM students WHERE grade <= 12"
+        "SELECT * FROM students WHERE grade < 12"
       )
     #binding.pry  
     results=students.map {|student| self.new_from_db(student)}
