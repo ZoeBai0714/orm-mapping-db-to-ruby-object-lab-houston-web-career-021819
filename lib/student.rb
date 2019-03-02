@@ -31,7 +31,7 @@ class Student
         [name]
       )
     #binding.pry  
-    self.new_from_db(row[0])  #convert row into instance
+    self.new_from_db(row[0])  #convert a row into an instance
   end
   
   def save
