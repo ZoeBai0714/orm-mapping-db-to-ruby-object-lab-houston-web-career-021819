@@ -34,6 +34,7 @@ class Student
     self.new_from_db(row[0])  #convert a row into an instance
   end
   
+  
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade) 
@@ -59,4 +60,6 @@ class Student
     sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
   end
+  
+  
 end
