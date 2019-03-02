@@ -66,7 +66,7 @@ class Student
         "SELECT * FROM students WHERE grade = 9"
       )
     binding.pry  
-    students.map  
+    students.map {|student|}  
   end
   
   
