@@ -73,7 +73,7 @@ class Student
     students = DB[:conn].execute(
         "SELECT * FROM students WHERE grade < 12"
       )
-    results=students.map {|student| self.new_from_db(student)}
+    students.map {|student| self.new_from_db(student)}
   end
   
 end
