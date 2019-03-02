@@ -16,7 +16,7 @@ class Student
    result = DB[:conn].execute(
       "SELECT * FROM students"
      )
-     
+   binding.pry   
    result   
   end
 
