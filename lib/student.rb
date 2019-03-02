@@ -88,8 +88,8 @@ class Student
         "SELECT * FROM students WHERE grade = 10 LIMIT 1"
       )
     #binding.pry  
-    results = students.map {|student| self.new_from_db(student)}
-    results[0]
+    results = students.map {|student| self.new_from_db(student)} #it returns an array
+    results[0]  # return as an instance
   end
   
 end
