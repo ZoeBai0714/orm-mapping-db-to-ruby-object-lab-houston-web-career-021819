@@ -30,7 +30,7 @@ class Student
         "SELECT * FROM students WHERE name = ?",
         [name]
       )
-    binding.pry  
+    #binding.pry  
     self.new_from_db(row[0])  
   end
   
