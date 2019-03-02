@@ -63,13 +63,17 @@ class Student
   
   def self.all_students_in_grade_9
     students = DB[:conn].execute(
-        "SELECT * FROM students WHERE grade = 9"
+        "SELECT * FROM students WHERE grade = 9"     #1. retrieve from DB
       )
-    students.map {|student| self.new_from_db(student[0])}  
+    students.map {|student| self.new_from_db(student[0])}    #2. convert to an instance
   end
   
   
   def self.students_below_12th_grade
+    students = DB[:conn].execute(
+        "SELECT * FROM students WHERE grade = 9"
+      )
+    students.map {|student| self.new_from_db(student[0])} 
   end
   
 end
