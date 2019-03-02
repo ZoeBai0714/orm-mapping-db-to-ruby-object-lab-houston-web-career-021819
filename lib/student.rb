@@ -15,7 +15,7 @@ class Student
       "SELECT * FROM students"
      )
    result.map do |student|
-     self.new_from_db(student) #use the method built above
+     self.new_from_db(student) #use the method built above converting each row into an instance
    end
   end
 
