@@ -76,7 +76,7 @@ class Student
     students.map {|student| self.new_from_db(student)}
   end
   
-  def self.first_X_students_in_grade_10
+  def self.first_X_students_in_grade_10(x)
     students = DB[:conn].execute(
         "SELECT * FROM students WHERE grade = 10"
       )
