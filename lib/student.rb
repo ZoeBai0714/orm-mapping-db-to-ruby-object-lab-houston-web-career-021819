@@ -15,7 +15,7 @@ class Student
       "SELECT * FROM students"
      )
    result.map do |student|
-     self.new_from_db(student)
+     self.new_from_db(student) #use the method built above
    end
   end
 
