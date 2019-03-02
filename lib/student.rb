@@ -74,7 +74,7 @@ class Student
         "SELECT * FROM students WHERE grade <= 12"
       )
     #binding.pry  
-    students.map {|student| self.new_from_db(student[0])} 
+    students.map {|student| self.new_from_db(student)} 
   end
   
 end
