@@ -11,7 +11,6 @@ class Student
   end
 
   def self.all
-    
    result = DB[:conn].execute(
       "SELECT * FROM students"
      )
